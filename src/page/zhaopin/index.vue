@@ -1,37 +1,52 @@
 <template>
-  <div>
-	 <section class='up'>
-		 
-	 </section>
-	<section class='content'>
-	 </section>
-  </div>
+	<section class='part1'>
+		<div class='img_box'>
+			<img :src='mainImgPath' />
+			<div class='img_content'>
+				<p>HIRE</p>
+				<p>招聘</p>
+			</div>
+		</div>
+		<div class='content_box'>
+			<div class='title'>
+				<p>HIRE</p>
+				<p> <span class='zhaopin_chinese'>社会招聘</span></p>
+			</div>
+			<div class='content'>
+				<div class='zhaopinxinxi'>
+					<ul> 
+						<li v-for="(item,index) in partOneContent">
+							<span class='zhiwei'>{{item.name}} \</span>
+							<span class='zhiweiDesc'>{{item.value}}</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+	</section>
 </template>
 <script>
-
+	import { get } from '@/axios/fetch';
     export default {
-      name: 'about',
-      components:{
-
-      },
+      name: 'zhaopin',
       data () {
         return {
-			
+			mainImgPath:'/static/image/zhaopin/1.png',
+			partOneContent:[],
         }
       },
       mounted(){
-		this.initBanner();
+		  this.getPageData();
       },
-
       methods:{
-		  // 初始化banner图
-		  initBanner(){
-			  for(let i=1; i<=5;i++ ){
-				  this.bannerArr.push({
-					 imgPath: '/static/image/banner/' + i +'.png'
-				  })
-			  }
-		  },
+		 getPageData(){
+			 let path='/static/js/zhaopin/content.json';
+			 get(path).then((res)=>{
+			 	this.partOneContent = res.partOneContent;
+				
+			 })
+		 }
       }
     }
 </script>

@@ -4,8 +4,9 @@
 			<Header> </Header>
 		</section>
 	  <section class='content'>
-		  <About></About>
-		  <Live></Live>
+		<!--  <About></About>
+		  <Live></Live> -->
+		  <Zhaopin></Zhaopin>
 		<!-- <transition name="fade" mode="out-in" appear>
 		  <keep-alive >
 			<div >
@@ -23,10 +24,11 @@
   import Header from '@/components/header/index';
   import About from '@/page/about/index';
   import Live from '@/page/live/index';
+  import Zhaopin from '@/page/zhaopin/index';
     export default {
       name: 'Home',
       components:{
-        Header,About,Live
+        Header,About,Live,Zhaopin
       },
       data () {
         return {
