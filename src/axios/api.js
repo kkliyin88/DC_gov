@@ -6,12 +6,12 @@
 
 
 import { fetch } from "./fetch"; //引用fetch.js
-import api from './url'; //引用url.js
+import api from "./url"; //引用url.js
 
 //查看用户
 export const lookOption = (shopCode,groupName) => fetch({
   url: api.Hallowmas,
-  method: 'post',
+  method: "post",
   params:{
     shopCode:shopCode,
     groupName:groupName
@@ -20,7 +20,7 @@ export const lookOption = (shopCode,groupName) => fetch({
 //查询仪表
 export const meterQuery = (pageNum,pageSize) => fetch({
   url: api.MeterQuery,
-  method: 'post',
+  method: "post",
   params:{
     pageNum:pageNum,
     pageSize:pageSize

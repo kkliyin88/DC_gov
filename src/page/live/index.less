@@ -1,7 +1,6 @@
 .live_wrap{
 	position: relative;
 	.banner{
-		width: 1920px;
 		height: 1080px;
 		position: relative;
 		.banner_msg{
@@ -14,7 +13,6 @@
 			position: absolute;
 			top: 150px;
 			left: 182px;
-			
 		}
 	}
 	.live_content{
@@ -40,36 +38,99 @@
 				}
 			}
 			.bg1{
-				background-image: url('/static/image/live/background/1.png');
+				background-image: url("/static/image/live/background/1.png");
 			}
 			.content{
-				margin:0 auto;
+				width: 100%;
+				padding:0 11.25%;
 				font-size: 24px;
 				line-height: 50px;
 				color: #39304A;
-				width: 1500px;
 				text-align: center;
 			}
 			
+			//公司环境
 			.company_img_box{
-				width: 1400px;
-				margin:0 auto;
+				margin: 0 14%;
 				display: flex;
-				flex-direction: row;
+				flex-shrink:1;
 				img{
-					margin-left: 10px;
+					width: 100%;
+					height: aoto;
 				}
 			}
-			.live_img_box{
-				.img_line2{
-					width: ;
+			//生活环境
+			.living_img_box{
+				margin: 0 14%;
+				margin-top: 20px;
+				display: flex;
+				flex-shrink:1;
+				img{
+					width: 100%;
+					height: aoto;
+				}
+			}
+			.activity_img_box{
+				margin: 0 4%;
+				margin-top: 20px;
+				display: flex;
+				flex-shrink:1;
+				img{
+					width: 100%;
+					height: aoto;
 				}
 			}
 			
+			.food_img_box{
+				// margin: 0 auto;
+				margin-top: 20px;
+				width: 1500px;
+				border: 1px solid green;
+				height: 310px;
+				overflow-x: scroll;
+				img{
+					width: 420px;
+					height: 300px;
+					display: inline
+				}
+			}
 		}
 		
-	
-		
+		//社会公益
+		.chairty_content_item{
+			display: flex;
+			flex-direction: row;
+			margin-top: 80px;
+			.left{
+				margin-left: 11%;
+				.theme{
+					text-align: center;
+					margin-top: 50px;
+					margin-bottom: 30px;
+					p{
+						font-size: 45px;
+						line-height: 55px;
+					}
+					.title_english{
+						color: #281D3B;
+						padding-top: 30px;
+					}
+					.title_chinese{
+						display: inline-block;
+						color: #281E3B;
+						border-bottom: 20px solid #EDCD20;
+					}
+				}
+				.content{
+					width: 100%;
+					padding:0 11.25%;
+					font-size: 24px;
+					line-height: 50px;
+					color: #39304A;
+					text-align: center;
+				}
+			}
+		}
 	}
 	
 }

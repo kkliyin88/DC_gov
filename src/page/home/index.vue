@@ -1,34 +1,25 @@
 <template>
     <div class="main_wrap">
-		<section class='header'>
-			<Header> </Header>
+		<section class="header">
+			<Head> </Head>
 		</section>
-	  <section class='content'>
-		<!--  <About></About>
-		  <Live></Live> -->
-		  <Zhaopin></Zhaopin>
-		<!-- <transition name="fade" mode="out-in" appear>
+	  <section class="content">
+		<transition name="fade" mode="out-in" appear>
 		  <keep-alive >
 			<div >
 				<router-view></router-view>
 			</div>
 		 </keep-alive>
-		</transition> -->
+		</transition>
 	  </section>
-	  <!-- <section class='footer' >
-		 <Footer></Footer> 
-	  </section> -->
     </div>
 </template>
 <script>
-  import Header from '@/components/header/index';
-  import About from '@/page/about/index';
-  import Live from '@/page/live/index';
-  import Zhaopin from '@/page/zhaopin/index';
+  import Head from "@/components/head";
     export default {
-      name: 'Home',
+      name: "Home",
       components:{
-        Header,About,Live,Zhaopin
+        Head     // About,Live,Zhaopin,Contact
       },
       data () {
         return {
@@ -43,7 +34,7 @@
       }
     }
 </script>
-<style less='lange' scoped>
+<style less="lange" scoped>
 	.main_wrap{
 		display: flex;
 		flex-direction: column;
@@ -53,8 +44,7 @@
 	}
 	.header{
 		width: 100%;
-		height: 150px;
-		border: 1px solid green;
+		height: 100px;
 	}
    .fade-enter,.fade-leave-to{
 	  opacity:  0;/*透明度*/
@@ -63,7 +53,6 @@
 	.content{
 		/* padding-left: 8%;
 		padding-right: 8%; */
-		background: #f5f5f5;
 		overflow-y: scroll;
 		flex: 1;
 	}
