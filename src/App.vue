@@ -9,12 +9,6 @@
 </template>
 <script>
 export default {
-  name: "App"
+  name: 'App'
 }
 </script>
-<style lang="less">
-	#app{
-		// width: 1920px;
-		overflow: hidden;
-	}
-</style>
