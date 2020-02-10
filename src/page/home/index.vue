@@ -3,7 +3,7 @@
 		<section class="header">
 			<Head> </Head>
 		</section>
-	  <section class="content">
+	  <section class="content" ref='content'>
 		<transition name="fade" mode="out-in" appear>
 		  <keep-alive >
 			<div >
@@ -27,6 +27,11 @@
       },
       mounted(){
       },
+	  watch:{
+	    $route(to,from){ //切换页面的时候设置滚动条高度为0
+		  this.$refs.content.scrollTop = 0;
+	    }
+	  },
       computed:{
 
       },

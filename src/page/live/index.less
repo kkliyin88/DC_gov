@@ -82,12 +82,20 @@
 			}
 			
 			.food_img_box{
-				// margin: 0 auto;
+				margin: 0 auto;
+				ul{
+					display: inline-block;
+					display: flex;
+					flex-direction: row;
+					overflow-x: auto;
+					li{
+						display: inline-block;
+						margin: 0 5px;
+					}
+				}
 				margin-top: 20px;
 				width: 1500px;
-				border: 1px solid green;
-				height: 310px;
-				overflow-x: scroll;
+				height: 300px;
 				img{
 					width: 420px;
 					height: 300px;

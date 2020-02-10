@@ -13,13 +13,15 @@
 			<p>生活</p>
 		</div>
 	</section>
-	<section class="live_content" style="background: url(../../../static/image/live/background/1.png) no-repeat 0 650px;">
+	<section class="live_content" style="background: url(/static/image/live/background/1.png) no-repeat 0 650px;">
 		<!-- 公司环境 -->
-		<div  class="live_content_item" >
+		<div  class="live_content_item"  v-if='contentArr.length>0'>
+			
 			<div class="theme">
-				<p class="title_english">{{contentArr[0].title_english}}</p>
+				<p class="title_english" >{{contentArr[0].title_english}}</p>
 				<p class="title_chinese">{{contentArr[0].title_chinese}}</p>
 			</div>
+			
 			<div class="content">
 				<p v-for= "(item,index) in contentArr[0].content"class="title_english">{{item}}</p>
 			</div>
@@ -36,13 +38,13 @@
 			</div>
 		</div>
 		<!-- 住宿环境 -->
-		<div  class="live_content_item">
+		<div  class="live_content_item"  v-if='contentArr.length>0'>
 			<div class="theme">
-				<p class="title_english">{{contentArr[1].title_english}}</p>
-				<p class="title_chinese">{{contentArr[1].title_chinese}}</p>
+				<p class="title_english"  >{{contentArr[1].title_english}}</p>
+				<p class="title_chinese" >{{contentArr[1].title_chinese}}</p>
 			</div>
 			<div class="content">
-				<p v-for= "(item,index) in contentArr[1].content"class="title_english">{{item}}</p>
+				<p v-for= "(item,index) in contentArr[1].content" class="title_english">{{item}}</p>
 			</div>
 			<div class="live_img_box">
 				<div class="living_img_box"> <!-- 第一行 -->
@@ -71,9 +73,9 @@
 		</div>
 		
 		<!-- 消遣娱乐 -->
-		<div  class="live_content_item">
+		<div  class="live_content_item" v-if='contentArr.length>0'>
 			<div class="theme">
-				<p class="title_english">{{contentArr[2].title_english}}</p>
+				<p class="title_english" >{{contentArr[2].title_english}}</p>
 				<p class="title_chinese">{{contentArr[2].title_chinese}}</p>
 			</div>
 			<div class="content">
@@ -101,20 +103,24 @@
 		</div>
 		
 		<!-- FOOD -->
-		<div  class="live_content_item">
+		<div  class="live_content_item"  v-if='contentArr.length>0'>
 			<div class="theme">
-				<p class="title_english">{{contentArr[3].title_english}}</p>
-				<p class="title_chinese">{{contentArr[3].title_chinese}}</p>
+				<p class="title_english" >{{contentArr[3].title_english}}</p>
+				<p class="title_chinese" >{{contentArr[3].title_chinese}}</p>
 			</div>
 			<div class="content">
 				<p v-for= "(item,index) in contentArr[3].content" class="title_english">{{item}}</p>
 			</div>
-			<!-- <div class="food_img_box">
-				<img v-for="(item,index) in FoodArr" :key="index" :src="item.imgPath"/>
-			</div> -->
+			<div class="food_img_box">
+				<ul ref='list' @mousedown='start' @mousemove='move' @mouseup='end'>
+					<li  v-for="(item,index) in FoodArr" :key="index">
+						<img :src="item.imgPath"/>
+					</li>
+				</ul>
+			</div>
 		</div>
 		<!-- 社会公益 -->
-		<div class="chairty_content_item">
+		<div class="chairty_content_item"  v-if='contentArr.length>0'>
 			<div class="left">
 				<div class="theme">
 					<p class="title_english">{{contentArr[4].title_english}}</p>
@@ -148,14 +154,44 @@
         }
       },
       mounted(){
+		// this.setFoodPicMove();
+		setTimeout(function(){
+		    console.log(2222)
+		},200);
+		setTimeout(()=>{
+		  console.log(111)
+		},1000)
 		this.initBanner();
 		this.initActivityBanner();
 		this.initFood()
 		this.getContent();
+		
       },
 
       methods:{
-		 
+		  start(event){ // 鼠标按下事件
+		    console.log('down',event);
+			this.pageX=event.pageX;
+			this.pageY=event.pageY;
+			this.scrollLeft = this.$refs.list.scrollLeft;
+		  },
+		  move(event){
+			  let pageX = event.pageX;
+			  let pageY = event.pageY;
+			  let x= this.pageX-pageX;
+			  let y = this.pageY - pageY;
+			  // 往右移动
+			  this.$refs.list.scrollLeft = this.scrollLeft + x;
+		  },
+		  end(){
+			  
+		  },
+		  setFoodPicMove(){
+			 window.setTimeout(()=>{
+				  // this.$refs.list.scrollLeft  = this.$refs.list.scrollLeft+1+'px';
+				  console.log('scrollLeft', this.$refs.list.scrollLeft)
+			 },1000)
+		  },
 		  initActivityBanner(){  // 初始化消遣娱乐banner图
 		      this.activityBannerArr = [];
 			  for(let i=1; i<=5;i++ ){
@@ -166,7 +202,7 @@
 		  },
 		  initFood(){
 			 this.FoodArr = [];
-			 for(let i=1; i<=11;i++ ){
+			 for(let i=1; i<=10;i++ ){
 				  this.FoodArr.push({
 					 imgPath: "/static/image/live/food/" + i +".png"
 				  })
