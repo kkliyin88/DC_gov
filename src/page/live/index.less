@@ -83,11 +83,12 @@
 			
 			.food_img_box{
 				margin: 0 auto;
+				overflow: hidden;
 				ul{
 					display: inline-block;
 					display: flex;
 					flex-direction: row;
-					overflow-x: auto;
+					// overflow-x: auto;
 					li{
 						display: inline-block;
 						margin: 0 5px;
@@ -142,5 +143,13 @@
 	}
 	
 }
+@keyframes mymove{
+	 0%{left:0px;}
+	 100%{left:-6900px;}
+	
+}
 
-
+.food_ul{
+	animation:mymove 60s infinite Linear ;
+	position: relative;
+}

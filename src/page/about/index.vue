@@ -66,12 +66,15 @@
       },
       mounted(){
 		  this.getPageData();
+		  setTimeout(function(){
+			  console.log('test')
+		  },100)
       },
       methods:{
 		  getPageData(){
 			 let path="/static/js/about/content.json";
 			 get(path).then((res)=>{
-				 this.imageMsg = res.imageMsg
+				this.imageMsg = res.imageMsg
 				this.aboutus = res.aboutus;
 				this.jingyinglinian = res.jingyinglinian;
 				this.qiyeyuanjing = res.qiyeyuanjing;
