@@ -72,8 +72,8 @@
 					<div class="content" style="padding-top: 150px;padding-bottom: 120px;">
 						<p>{{ contentArr[2].content[0] }}</p>
 					</div>
-					<div style="padding-bottom: 80px;">
-						<Carousel loop autoplay :current-index="0" :autoplay-speed="4000">
+					<div class='happy_banner' style="padding-bottom: 80px;">
+						<Carousel loop :current-index="0" :autoplay-speed="4000">
 							<CarouselItem v-for="(item, index) in activityBannerArr" :key="index">
 								<div><img :src="item.imgPath" /></div>
 							</CarouselItem>
@@ -92,7 +92,7 @@
 					<p v-for="(item, index) in contentArr[3].content" class="title_english">{{ item }}</p>
 				</div>
 				<div class="food_img_box">
-					<ul class='food_ul' ref="list" > <!-- @mousedown="start" @mousemove="move" @mouseup="end" -->
+					<ul class='food_ul' ref="list" > 
 						<li  v-for="(item, index) in FoodArr" :key="index"><img :src="item.imgPath" /></li>
 						<li  v-for="(item, index) in FoodArr" :key="index"><img :src="item.imgPath" /></li>
 					</ul>
@@ -137,26 +137,6 @@ export default {
 	},
 
 	methods: {
-		start(event) {
-			// 鼠标按下事件
-			console.log('down', event);
-			this.pageX = event.pageX;
-			this.pageY = event.pageY;
-			this.scrollLeft = this.$refs.list.scrollLeft;
-			console.log('scrollLeft', this.scrollLeft);
-		},
-		move(event) {
-			let pageX = event.pageX;
-			let pageY = event.pageY;
-			let x = this.pageX - pageX;
-			let y = this.pageY - pageY;
-			// 往右移动
-			if (this.$refs.list.scrollLeft < 0 || this.$refs.list.scrollLeft > 2900) return;
-			this.scrollLeft += x;
-			this.$refs.list.scrollLeft = this.scrollLeft;
-			console.log('scrollLeft111', this.scrollLeft);
-		},
-		end() {},
 		setFoodPicMove() {
 			window.setTimeout(() => {
 				// this.$refs.list.scrollLeft  = this.$refs.list.scrollLeft+1+'px';

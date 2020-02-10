@@ -10,7 +10,7 @@ import Axios from 'axios'
 
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';
-// import './style/main.css';
+import './style/main.css';
 Vue.use(iView);
 Vue.config.productionTip = false;
 Vue.prototype.$http = Axios;
