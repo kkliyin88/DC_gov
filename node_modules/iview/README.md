@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://www.iviewui.com">
+    <a href="http://iview.talkingdata.com/">
         <img width="200" src="https://file.iviewui.com/logo-new.svg">
     </a>
 </p>
@@ -22,7 +22,7 @@ iView
 
 ## Docs
 
-**[3.x](https://www.iviewui.com)** | [2.x](http://v2.iviewui.com) | [1.x](http://v1.iviewui.com)
+**[3.x](http://iview.talkingdata.com/)** | [2.x](http://v2.iviewui.com) | [1.x](http://v1.iviewui.com)
 
 ## Features
 
@@ -130,11 +130,6 @@ If you want to contribute or have questions or bugs to report:
 - [iView-Area](https://github.com/iview/iview-area)
 - [iView-Editor](https://github.com/iview/iview-editor)
 
-## Sponsors
-![](https://opencollective.com/iview/tiers/sponsor.svg?avatarHeight=36)
-
-## Backers
-![](https://opencollective.com/iview/tiers/backer.svg?avatarHeight=36)
 
 ## License
 [MIT](http://opensource.org/licenses/MIT)
