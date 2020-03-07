@@ -15,11 +15,13 @@
     </div>
 </template>
 <script>
-  import Head from "@/components/head";
+  import About from "@/page/about";
+  import Live from "@/page/live";
+   import Zhaopin from "@/page/zhaopin";
     export default {
       name: "Home",
       components:{
-        Head     // About,Live,Zhaopin,Contact
+         About,Live,Zhaopin,
       },
       data () {
         return {
