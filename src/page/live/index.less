@@ -1,168 +1,148 @@
-.live_wrap{
+
+
+.banner{
 	position: relative;
-	.banner{
-		height: 850px;
-		overflow-y: hidden;
-		position: relative;
-		.banner_msg{
-			p{
-				height: 60px;
-				line-height: 70px;
-				font-size: 60px;
-				color: #FFF;
-			}
-			position: absolute;
-			top: 150px;
-			left: 182px;
-		}
-		.banner-img img{
-			height: 100%;
-			width: 100%;
-		}
+	img{
+		width:100%;
+		height: auto;
 	}
-	.live_content{
-		border: 1px solid yellow;
-		.live_content_item{
-			text-align: center;
-			.theme{
-				text-align: center;
-				margin-top: 50px;
-				margin-bottom: 30px;
-				p{
-					font-size: 45px;
-					line-height: 55px;
-				}
-				.title_english{
-					color: #281D3B;
-					padding-top: 30px;
-				}
-				.title_chinese{
-					display: inline-block;
-					color: #281E3B;
-					border-bottom: 20px solid #EDCD20;
-				}
-			}
-			.bg1{
-				background-image: url("/static/image/live/background/1.png");
-			}
-			.content{
-				width: 100%;
-				padding:0 11.25%;
-				font-size: 24px;
-				line-height: 50px;
-				color: #39304A;
-				text-align: center;
-			}
-			
-			//公司环境
-			.company_img_box{
-				margin: 0 14%;
-				display: flex;
-				flex-shrink:1;
-				img{
-					width: 100%;
-					height: aoto;
-				}
-			}
-			
-			// 娱乐消遣
-			.happy_banner{
-				margin: auto;
-				width: 1100px;
-			}
-			
-			
-			//生活环境
-			.living_img_box{
-				margin: 0 14%;
-				margin-top: 20px;
-				display: flex;
-				flex-shrink:1;
-				img{
-					width: 100%;
-					height: aoto;
-				}
-			}
-			.activity_img_box{
-				margin: 0 4%;
-				margin-top: 20px;
-				display: flex;
-				flex-shrink:1;
-				img{
-					width: 100%;
-					height: aoto;
-				}
-			}
-			
-			.food_img_box{
-				margin: 0 auto;
-				overflow: hidden;
-				ul{
-					display: inline-block;
-					display: flex;
-					flex-direction: row;
-					// overflow-x: auto;
-					li{
-						display: inline-block;
-						margin: 0 5px;
-					}
-				}
-				margin-top: 20px;
-				width: 1500px;
-				height: 300px;
-				img{
-					width: 420px;
-					height: 300px;
-					display: inline
-				}
-			}
-		}
-		
-		//社会公益
-		.chairty_content_item{
-			display: flex;
-			flex-direction: row;
-			margin-top: 80px;
-			.left{
-				margin-left: 11%;
-				.theme{
-					text-align: center;
-					margin-top: 50px;
-					margin-bottom: 30px;
-					p{
-						font-size: 45px;
-						line-height: 55px;
-					}
-					.title_english{
-						color: #281D3B;
-						padding-top: 30px;
-					}
-					.title_chinese{
-						display: inline-block;
-						color: #281E3B;
-						border-bottom: 20px solid #EDCD20;
-					}
-				}
-				.content{
-					width: 100%;
-					padding:0 11.25%;
-					font-size: 24px;
-					line-height: 50px;
-					color: #39304A;
-					text-align: center;
-				}
-			}
-		}
-	}
-	
 }
-@keyframes mymove{
-	 0%{left:0px;}
-	 100%{left:-6900px;}
-	
+.box1{
+	.title{
+		display:flex;
+		flex-direction:column;
+		justify-content: center;
+		margin: 25px 0;
+		img{
+			object-fit: contain;
+		}
+	}
+	.content{
+		ul{
+			display:flex;
+			flex-direction:row;
+			justify-content: center;
+			align-items: center;
+			li{
+				border: 1px solid green;
+				margin: 0 10px;
+				.text_box{
+					display:flex;
+					flex-direction:column;
+					justify-content: space-between;
+					font-size: 26px;
+					color:#333333;
+					text-indent:2em;
+					.text{
+						display:flex;
+						justify-content: center;
+					}
+				}
+			}
+		}
+	}
+}
+.box2{
+	.title{
+		display:flex;
+		flex-direction:row;
+		justify-content: center;
+		margin: 25px 0;
+	}
+	.content{
+		display:flex;
+		flex-direction:row;
+		justify-content: center;
+		.up{
+			display:flex;
+			flex-direction:column;
+			justify-content: center;
+			font-size: 25px;
+			 color:#333333;
+			 text-indent:2em;
+		}
+		.left{
+			margin-right: 30px;
+		}
+		.right{
+			display:flex;
+			flex-direction:column;
+			justify-content: space-between;
+			.up{
+				padding-top: 60px;
+			}
+		}
+	}
+}
+.box3{
+	padding: 25px 0;
+	margin-top: 25px;
+	background-color: rgb(238,241,242);
+	ul {
+		display:flex;
+		flex-direction:row;
+		justify-content: center;
+		flex-wrap: nowrap;
+		overflow-x: hidden;
+		 white-space: nowrap;
+		li{
+			display: inline-block;
+			width: 756px;
+			height: 327px;
+			display:flex;
+			flex-direction:column;
+			justify-content: center;
+			align-items: center;
+			font-size: 25px;
+			color:#333333;
+			text-align: left;
+			border: 1px solid green;
+		}
+	}
 }
 
-.food_ul{
-	animation:mymove 60s infinite Linear ;
-	position: relative;
+.box4{
+	margin-top: 25px;
+	display:flex;
+	flex-direction:row;
+	justify-content: center;
+	.left{
+		display:flex;
+		flex-direction:column;
+		justify-content: center;
+		.up{
+			font-size: 26px;
+			color:#333333;
+		}
+	}
+	.right{
+		margin-left: 20px;
+	}
 }
+
+.box5 {
+	display:flex;
+	flex-direction:row;
+	justify-content: center;
+	margin-top: 25px ;
+	margin-bottom: 80px ;
+	.left{
+		
+	}
+	.right{
+		margin-left: 20px;
+		.img_box{
+			border: 1px solid red ;
+			width: 100%;
+			img{
+				width: 100%;
+			}
+		}
+	}
+	.left,.right{
+		border: 1px solid green;
+		width: 731px;
+		height: 721px;
+	}
+}
+

@@ -1,181 +1,171 @@
 <template>
 	<div class="live_wrap">
 		<section class="banner">
-			<Carousel loop autoplay :current-index="0" :autoplay-speed="4000">
-				<CarouselItem v-for="(item, index) in bannerArr" :key="index">
-					<div class="banner-img"><img :src="item.imgPath" /></div>
-				</CarouselItem>
-			</Carousel>
-			<div class="banner_msg">
-				<p>LIVING</p>
-				<p>生活</p>
+			<img :src="require('@/assets/live/banner.jpg')" />
+		</section>
+		<!-- 公司环境 -->
+		<section class='box1'>
+			<div class='title'>
+				<img :src="require('@/assets/live/company.png')" />
+			</div>
+			<div class='content'>
+				<ul>
+					<li>
+						<div>
+							<img :src="require('@/assets/live/p1.png')" />
+						</div>
+					</li>
+					<li>
+						<div class='text_box'>
+							<div class='text'>
+								<div >
+									公司大楼位于马尼拉趴赛繁<br />
+									华区，大型购物中心（含中国超<br />
+									市），各国风味餐厅（含各式中<br />
+									餐厅）应有尽有。距离亚洲最大<br />
+									商城MOA和免税店LUXE步行距<br />
+									离仅10分钟左右。办公环境宽<br />
+									敞明亮，绿植环绕，并为职员专<br />
+									配茶水间和吸烟室，茶水间已配<br />
+									置冰箱、微波炉、咖啡机等电器<br />
+									设备。<br />
+									<br />
+								</div>
+								
+							</div>
+							<img :src="require('@/assets/live/p3.png')" />
+						</div>
+					</li>	
+					<li>
+						<div>
+							<img :src="require('@/assets/live/p2.png')" />
+						</div>
+					</li>	
+					
+				</ul>
 			</div>
 		</section>
-		<section class="live_content" style="background: url(/static/image/live/background/1.png) no-repeat 0 650px;">
-			<!-- 公司环境 -->
-			<div class="live_content_item" v-if="contentArr.length > 0">
-				<div class="theme">
-					<p class="title_english">{{ contentArr[0].title_english }}</p>
-					<p class="title_chinese">{{ contentArr[0].title_chinese }}</p>
-				</div>
-
-				<div class="content">
-					<p v-for="(item, index) in contentArr[0].content" class="title_english">{{ item }}</p>
-				</div>
-				<div class="company_img_box">
-					<div align="center"><img src="/static/image/live/companyEnv/1.png" /></div>
-					<div align="center" style="margin-left: 20px;"><img src="/static/image/live/companyEnv/2.png" /></div>
-					<div align="center" style="margin-left: 20px;"><img src="/static/image/live/companyEnv/3.png" /></div>
-				</div>
+		<!-- 住宿环境 -->
+		<section class='box2'>
+			<div class='title'>
+				<img :src="require('@/assets/live/living.png')" />
 			</div>
-			<!-- 住宿环境 -->
-			<div class="live_content_item" v-if="contentArr.length > 0">
-				<div class="theme">
-					<p class="title_english">{{ contentArr[1].title_english }}</p>
-					<p class="title_chinese">{{ contentArr[1].title_chinese }}</p>
+			<div class='content'>
+				<div class='left'>
+					<img :src="require('@/assets/live/p4.png')" />
 				</div>
-				<div class="content">
-					<p v-for="(item, index) in contentArr[1].content" class="title_english">{{ item }}</p>
-				</div>
-				<div class="live_img_box">
-					<div class="living_img_box">
-						<!-- 第一行 -->
-						<img src="/static/image/live/liveEnv/1.png" />
+				<div class='right'>
+					<div class='up'>
+						<p >
+						    高级酒店式公寓，已统一自带生活电器，如空调、热水器、冰箱、微波炉<br />
+						    及电磁炉，带独立卫浴和阳台。<br />
+						    <br />
+						</p>
+						<p>
+						    健身房及泳池也供公司职员免费使用。
+						</p>
 					</div>
-					<div class="living_img_box">
-						<!-- 第二行 -->
-						<div><img src="/static/image/live/liveEnv/2.png" /></div>
-						<div><img style="margin-left: 10px;" src="/static/image/live/liveEnv/3.png" /></div>
-					</div>
-					<div class="living_img_box">
-						<!-- 第三行 -->
-						<div><img src="/static/image/live/liveEnv/4.png" /></div>
-						<div><img style="margin-left: 10px;" src="/static/image/live/liveEnv/5.png" /></div>
-						<div><img style="margin-left: 10px;" src="/static/image/live/liveEnv/6.png" /></div>
+					<div class='down'>
+						<ul>
+							<li>
+								<img :src="require('@/assets/live/p5.png')" />
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
-
-			<!-- 消遣娱乐 -->
-			<div class="live_content_item" v-if="contentArr.length > 0">
-				<div class="theme">
-					<p class="title_english">{{ contentArr[2].title_english }}</p>
-					<p class="title_chinese">{{ contentArr[2].title_chinese }}</p>
-				</div>
-				<div class="content">
-					<p>{{ contentArr[2].content[0] }}</p>
-				</div>
-				<div class="activity_img_box">
-					<div><img src="/static/image/live/activity/1.png" /></div>
-				</div>
-				<div style="background: url(/static/image/live/background/2.png);">
-					<div class="content" style="padding-top: 150px;padding-bottom: 120px;">
-						<p>{{ contentArr[2].content[0] }}</p>
+		</section>
+		
+		<!-- 消遣娱乐 -->
+		<section class='box3'>
+			<ul>
+				<li>
+					<img :src="require('@/assets/live/p7.png')" />
+				</li>
+				<li>
+					<img :src="require('@/assets/live/activity.png')" />
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<div class='text'>
+						<p  style="text-indent:2em;"> 工作和生活两不误，努力工作，尽情玩耍。不仅可以去</p>
+						<p> 亚洲最大商场购物，里面入驻了很多国际名牌和本土品</p>
+						<p> 牌，主要是价格比国内实惠。商场内有冬奥会规模的巨型 </p>
+						<p>溜冰场、IMAX电影院、电玩中心等。 </p>
+						<p style="text-indent:2em;"> 我们知道，马尼拉是一座富有浓厚热带情调的城市，也 </p>
+						<p>是东南亚著名的旅游胜地，城内城外可供游览的名胜数不 </p>
+						<p> 胜数。近至西班牙王城，塔尔火山，威尼斯水城；远至宿</p>
+						<p> 务，长滩岛，巴拉望等。 </p>
 					</div>
-					<div class='happy_banner' style="padding-bottom: 80px;">
-						<Carousel loop :current-index="0" :autoplay-speed="4000">
-							<CarouselItem v-for="(item, index) in activityBannerArr" :key="index">
-								<div><img :src="item.imgPath" /></div>
-							</CarouselItem>
-						</Carousel>
+					
+				</li>
+				<li>
+					<img :src="require('@/assets/live/p6.png')" />
+				</li>
+			</ul>
+			
+		</section>
+		
+		<!-- 美食 -->
+		<section class='box4'>
+			<div class='left'>
+				<div class='up'>
+					<div>
+						<img :src="require('@/assets/live/food.png')" />
 					</div>
+					<div>
+						<p style="text-indent:2em;">马尼拉是一座历史悠久的城市。它在印度文明，中国文明</p>
+						<p>及中亚古文明的基础上，融合西班牙，美国的西洋文明，形</p>
+						<p>成中西合璧。因此，在美食上也体现了多元化，除了菲律宾</p>
+						<p>当地乡土名菜外，还有日本料理、韩国烤肉、高档牛排、海</p>
+						<p>鲜大排档、火锅撸串等。公司食堂每日也为大家精心准备中</p>
+						<p>餐自助。</p>
+						<br />
+					</div>
+					
 				</div>
+				<div class='down'>
+					<img :src="require('@/assets/live/p9.png')" />
+				</div>
+				
 			</div>
-
-			<!-- FOOD -->
-			<div class="live_content_item" v-if="contentArr.length > 0">
-				<div class="theme">
-					<p class="title_english">{{ contentArr[3].title_english }}</p>
-					<p class="title_chinese">{{ contentArr[3].title_chinese }}</p>
-				</div>
-				<div class="content">
-					<p v-for="(item, index) in contentArr[3].content" class="title_english">{{ item }}</p>
-				</div>
-				<div class="food_img_box">
-					<ul class='food_ul' ref="list" > 
-						<li  v-for="(item, index) in FoodArr" :key="index"><img :src="item.imgPath" /></li>
-						<li  v-for="(item, index) in FoodArr" :key="index"><img :src="item.imgPath" /></li>
-					</ul>
-				</div>
+			<div class='right'>
+				<img :src="require('@/assets/live/p8.png')" />
 			</div>
-			<!-- 社会公益 -->
-			<div class="chairty_content_item" v-if="contentArr.length > 0">
-				<div class="left">
-					<div class="theme">
-						<p class="title_english">{{ contentArr[4].title_english }}</p>
-						<p class="title_chinese">{{ contentArr[4].title_chinese }}</p>
-					</div>
-					<div class="content">
-						<p v-for="(item, index) in contentArr[4].content">{{ item }}</p>
-					</div>
+		</section>
+		
+		<!-- 社会公益 -->
+		<section class='box5'>
+			<div class='left'>
+				<img :src="require('@/assets/live/p10.png')" />
+			</div>
+			<div class='right'>
+				<div class='img_box'>
+					<img :src="require('@/assets/live/charity.png')" />
 				</div>
-				<div class="right"><img src="/static/image/live/charity/1.png" /></div>
+				<div class='text_box'>
+					
+				</div>
 			</div>
 		</section>
 	</div>
 </template>
 <script>
-import { get } from '@/axios/fetch';
 export default {
 	name: 'live',
 	components: {},
 	data() {
 		return {
-			bannerArr: [], //头部轮播图
-			activityBannerArr: [], // 周边环境轮播图
-			FoodArr: [],
-			contentArr: [] // 页面文案
+			
 		};
 	},
 	mounted() {
-		// this.setFoodPicMove();
-
-		this.initBanner();
-		this.initActivityBanner();
-		this.initFood();
-		this.getContent();
+		
 	},
 
 	methods: {
-		setFoodPicMove() {
-			window.setTimeout(() => {
-				// this.$refs.list.scrollLeft  = this.$refs.list.scrollLeft+1+'px';
-				console.log('scrollLeft', this.$refs.list.scrollLeft);
-			}, 1000);
-		},
-		initActivityBanner() {
-			// 初始化消遣娱乐banner图
-			this.activityBannerArr = [];
-			for (let i = 1; i <= 5; i++) {
-				this.activityBannerArr.push({
-					imgPath: '/static/image/live/activity/banner/' + i + '.png'
-				});
-			}
-		},
-		initFood() {
-			this.FoodArr = [];
-			for (let i = 1; i <= 10; i++) {
-				this.FoodArr.push({
-					imgPath: '/static/image/live/food/' + i + '.png'
-				});
-			}
-			
-		},
-		initBanner() {
-			//头部的banner
-			this.bannerArr = [];
-			for (let i = 1; i <= 5; i++) {
-				this.bannerArr.push({
-					imgPath: '/static/image/live/banner/' + i + '.png'
-				});
-			}
-		},
-		getContent() {
-			let path = '/static/js/live/content.json';
-			get(path).then(res => {
-				this.contentArr = res.contentArr;
-			});
-		}
+
 	}
 };
 </script>

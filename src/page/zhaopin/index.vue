@@ -1,113 +1,95 @@
 	
 <template>
 	<div>
-		<section class="part1">
-			<div class="img_box">
-				<img :src="mainImgPath" />
-				<div class="img_content">
-					<p>HIRE</p>
-					<p>招聘</p>
-				</div>
+		<section class="banner">
+			<img :src="require('@/assets/zhaopin/banner.jpg')" />
+		</section>
+		<section class='box1'>
+			<div class='title'>
+				<img :src="require('@/assets/zhaopin/hire.png')" />
 			</div>
-			<div class="title">
-				<img src="/static/image/zhaopin/shehuizhaopin.png" />
-			</div>
-			<div class="content_box">
-				<div class="content">
-					<div class="zhaopinxinxi">
-						<ul> 
-							<li v-for="(item,index) in partOneContent">
-								<span class="zhiwei">{{item.name}}\ </span>
-								<span class="zhiweiDesc"> {{item.value}}</span>
-							</li>
-						</ul>
-					</div>
-					<div class="didian" align="center">
-						<div  align="center">
-							<img src="/static/image/zhaopin/2.png" />
+			<div class='content' >
+				<ul>
+					<li v-for='(item,i) in arr1' :key='i'>
+						<div class='title'>
+							<div class='img_box'>
+								<img :src="item.img">
+							</div>
+							<div class='text_box'>
+								<span> {{ item.title }}</span>
+							</div>
 						</div>
-						
-						<p>首都马尼拉</p>
-					</div>
-					<div class="image">
-						<img src="/static/image/zhaopin/3.png" />
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="part2">
-			<div class="left">
-				<img src="/static/image/zhaopin/4.png" />
-			</div>
-			<div class="right">
-				<p class="title">薪资结构</p>
-				<p>
-					<span class="content" v-for="(item,i) in xinzhiArr">{{item}}</span>
-				</p>
-			</div>
-		</section>
-		
-		<section class="part3">
-			<div class="fuli_img" align="center">
-				<img src="/static/image/zhaopin/yuangongfuli.png" />
-			</div>
-			<div class="fuli_content">
-				<p v-for="(item,i) in fuliArr" :key="i">{{item}}</p>
-			</div>
-			<div class="fuli_img2" align="center">
-				<div>
-					<img src="/static/image/zhaopin/5.png" />
-				</div>
-			</div>
-			<div class="qiuzhi_img" align="center">
-				<img src="/static/image/zhaopin/qiuzhiwenda.png" />
-			</div>
-			<div class="wenda_box" >
-				<div  v-for="(item,i) in quesArr" :key="i">
-					<div class="title">
-						<p>{{item.title}}</p>
-					</div>
-					<div class="wenda_content">
-						<p>{{item.value}}</p>
-					</div>
-				</div>
-			</div>
-			<div class="fuli_img2" align="center">
-				<div>
-					<img src="/static/image/zhaopin/6.png" />
-				</div>
+						<div class='text_box'>
+							<span v-for='(text,t) in item.content' :key='t'>
+								{{text}}
+							</span>
+						</div>
+						<div class='addr'>
+							<p> {{item.addr}}</p>
+						</div>
+					</li>
+				</ul>
 			</div>
 		</section>
 	</div>
-	
-	
 </template>
 <script>
-	import { get } from "@/axios/fetch";
+	
     export default {
       name: "zhaopin",
       data () {
         return {
-			mainImgPath:"/static/image/zhaopin/1.png",
-			partOneContent:[],
-			xinzhiArr:[], //薪资待遇
-			fuliArr:[], //员工福利
-			quesArr:[], //问答
+			arr1:[
+				{   index:0,
+					title:'招聘专员',
+					content:['税后工资','8k-30k','工作时间9休4'],
+					addr:'菲律宾首都马尼拉',
+					img:require('@/assets/zhaopin/tb1.png')
+				},
+				{   index:1,
+					title:'在线中文客服',
+					content:['税后工资','7k-15k','工作时间12休2'],
+					addr:'菲律宾首都马尼拉',
+					img:require('@/assets/zhaopin/tb2.png')
+				},
+				{   index:2,
+					title:'在线推广专员',
+					content:['税后工资','7k-30k','工作时间12休2'],
+					addr:'菲律宾首都马尼拉',
+					img:require('@/assets/zhaopin/tb3.png')
+				},
+				{   index:3,
+					title:'电话销售',
+					content:['税后工资','8k-15k','工作时间10.5休2'],
+					addr:'菲律宾首都马尼拉',
+					img:require('@/assets/zhaopin/tb4.png'),
+				},
+				{   index:0,
+					title:'招聘专员',
+					content:['税后工资','8k-13k','工作时间9休2'],
+					addr:'菲律宾首都马尼拉',
+					img:require('@/assets/zhaopin/tb5.png')
+				},
+				{   index:1,
+					title:'内账会计',
+					content:['税后工资','8k-12k','工作时间9休2'],
+					addr:'菲律宾首都马尼拉',
+					img:require('@/assets/zhaopin/tb6.png')
+				},
+				{   index:2,
+					title:'在线推广专员',
+					content:['税后工资','8k-17k','工作时间9休2'],
+					addr:'菲律宾首都马尼拉',
+					img:require('@/assets/zhaopin/tb7.png')
+				},
+			],
         }
       },
       mounted(){
-		  this.getPageData();
+		 
       },
       methods:{
-		 getPageData(){
-			 let path="/static/js/zhaopin/content.json";
-			 get(path).then((res)=>{
-			 	this.partOneContent = res.partOneContent;
-				this.fuliArr = res.fuliArr;
-				this.quesArr = res.quesArr;
-				this.xinzhiArr = res.xinzhiArr;
-			 })
-		 }
+		 
       }
     }
 </script>
