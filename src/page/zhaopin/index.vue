@@ -9,6 +9,8 @@
 				<img :src="require('@/assets/zhaopin/hire.png')" />
 			</div>
 			<div class='content' >
+				
+				1221
 				<!-- <div class="bg">
 					<img :src="require('@/assets/zhaopin/dbx1.jpg')" >
 				</div> -->
