@@ -6,14 +6,9 @@
 	}
 }
 .box1{
-	// display:flex;
-	// flex-direction:row;
-	// justify-content: center;
 	margin: 25px 0;
-	
-	
 	.title{
-		margin: 25px 0;
+		margin: 25px;
 		display:flex;
 		flex-direction:column;
 		justify-content: center;
@@ -22,27 +17,42 @@
 		}
 	}
 	.content{
-		background-color: rgb(238,231,241);
+		width: 100%;
+		background-color: #EEE7F1;
+		background: url('../../assets/zhaopin/dbx1.jpg');
 		padding: 25px 0;
+		.bg{
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			z-index: -1;
+			border: 1px solid green;
+			img{
+				height: 100%;
+				width: 100%;
+			}
+		}
 		ul{
 			display:flex;
 			flex-direction:row;
 			justify-content: center;
 			align-items: baseline;
-			flex-wrap: wrap;
+			flex-wrap: nowrap;
 			align-content:flex-start;
 			li{
 				display: inline-block;
 				width: 380px;
-				border: 1px solid green;
-				margin: 2.5px;
-				margin-top: 25px;
-				background-color: #FFF;
-				border-radius: 5px;
-				flex-direction:column;
-				// justify-content: center;
-				align-items: center;
-				padding: 22px 40px;
+				margin: 25px 10px;
+				.contain{
+					width: 380px;
+					margin: 2.5px;
+					// border: 1px solid ;
+					background-color: #FFF;
+					border-radius: 5px;
+					flex-direction:column;
+					align-items: center;
+					padding: 22px 40px;
+				}
 				.title{
 					display:flex;
 					flex-direction:row;
