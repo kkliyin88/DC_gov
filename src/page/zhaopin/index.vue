@@ -61,6 +61,19 @@
 				</ul>
 			</div>
 		</section>
+		<section class='banner2'>
+			<img :src="require('@/assets/zhaopin/banner04.png')" />
+		</section>
+		<!-- 员工福利包 -->
+		<section class='box2'>
+			<div class='title'>
+				<img :src="require('@/assets/zhaopin/benefit.png')" />
+			</div>
+		</section>
+		<section class=''> 
+			<ul><li></li></ul>
+
+		</section>
 	</div>
 </template>
 <script>
