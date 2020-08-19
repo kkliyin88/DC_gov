@@ -70,9 +70,44 @@
 				<img :src="require('@/assets/zhaopin/benefit.png')" />
 			</div>
 		</section>
-		<section class=''> 
-			<ul><li></li></ul>
+		<section class='box3'> 
+			<div class='content'>
+				<ul >
+					<li>
+						<div class='text_box'>
+							<span class='num'>1</span>
+							<span class='text'>每6个月带薪休假15天</span>
+						</div>
+						<div class='text_box'>
+							<span class='num'>2</span>
+							<span class='text'>生日、中秋和过年高额礼金</span>
+						</div>
+						<div class='text_box'>
+							<span class='num'>3</span>
+							<span class='text'>每个按时免费发放生活和话费补贴及水果福利袋</span>
+						</div>
+						<div class='text_box'>
+							<span class='num'>4</span>
+							<span class='text'>免费享受当地医疗服务</span>
+						</div>
+						<div class='text_box'>
+							<span class='num'>5</span>
+							<span class='text'>高级公寓拎包入住</span>
+						</div>
+					</li>
+					<li>
+						<div class='img_box img_box2'>
+							<img :src="require('@/assets/zhaopin/P1.png')">
+						</div>
+					</li>
+				</ul>
+			</div>
 
+		</section>
+		<section class='box4'>
+			<div class='title'>
+				<img :src="require('@/assets/zhaopin/P2.png')" />
+			</div>
 		</section>
 	</div>
 </template>
