@@ -111,43 +111,74 @@
 		<section class='box5'>
 				<img :src="require('@/assets/zhaopin/q&a.png')" />
 		</section>
+
 		<section class='box6'>
-			<div class='top'>
-				<img :src="require('@/assets/zhaopin/P3.png')" />
+			<!-- <div class='title'>
+					<img :src="require('@/assets/zhaopin/q&a.png')" />
+				
+			</div> -->
+			<div class='content'>
+				<div class='left'>
+					<img :src="require('@/assets/zhaopin/P3.png')" />
+					<img :src="require('@/assets/zhaopin/P4.png')" />
+				</div>
+				<div class='right'>
+					<div class='item'>
+						<p>
+							<span class='wen_title'>求职者：</span> 
+							<span class='wen_text'>请问去国外工作需要交什么费用吗？</span>
+						</p>
+						<p>
+							<span class='da_title'>HR：</span> 
+							<span class='da_text'>	这是公司直招，不存在中介费用。</span>
+						</p>
+
+						<p>
+							<span class='wen_title'>求职者：</span> 
+							<span class='wen_text'>请问怎么面试呢？</span>
+						</p>
+						<p>
+							<span class='da_title'>HR：</span> 
+							<span class='da_text'>简历删选--QQ或微信或LINE电话初试--电脑视频复试--<br/></span>
+							<span class='da_text'>护照--入职体检--入境旅签--机票(公司预定)--工簽(公司<br/></span>
+							<span class='da_text'>申请)<br/></span>
+						</p>
+						<p>
+							<span class='wen_title'>求职者：</span> 
+							<span class='wen_text'>签证怎么办理呢？</span>
+						</p>
+						<p>
+							<span class='da_title'>HR：</span> 
+							<span class='da_text'>其一，公司提供办理，周期一般7天;第二，自行找淘宝<br/></span>
+							<span class='da_text'>网店或旅行社办理，速度相对较慢，周期价格需自己确认;<br/></span>
+						</p>
+						<p>
+							<span class='wen_title'>求职者：</span> 
+							<span class='wen_text'>可是我不会英文，可以吗？</span>
+						</p>
+						<p>
+							<span class='da_title'>HR：</span> 
+							<span class='da_text'>除了行政翻译岗位对英语有要求，其它岗位都不需要英<br/></span>
+							<span class='da_text'>文。公司职员来自东南亚各个国家，都是华人，说的都是中<br/></span>
+							<span class='da_text'>文。就像爸爸妈妈出国旅游，不会英文，也没有影响一样。<br/></span>
+						</p>
+
+						<p>
+							<span class='wen_title'>求职者：</span> 
+							<span class='wen_text'>菲律宾工作是否安全呢？</span>
+						</p>
+						<p>
+							<span class='da_title'>HR：</span> 
+							<span class='da_text'>全世界除了战乱国家存在安全隐患，其它国家期货死和咱<br/></span>
+							<span class='da_text'>们中国是一样的。大家都是平民百姓，每天努力工作和生<br/></span>
+							<span class='da_text'>活。更别说公司是在菲律宾首都马尼拉市中心了。<br/></span>
+						</p>
+
+					</div>
+
+				</div>
 			</div>
-			<div class='bottom'>
-				<img :src="require('@/assets/zhaopin/P4.png')" />
-			</div>
-			<div class='rigth'>
-				<span>
-					求职者：<p>请问去国外工作需要交什么费用吗？</p>
-					HR：这是公司直招，不存在中介费用。<br/>
-				</span>
-				<span>
-					求职者：<p>请问怎么面试呢？</p>
-					HR：简历删选--QQ或微信或LINE电话初试--电脑视频复试-- <br/>
-					护照--入职体检--入境旅签--机票(公司预定)--工簽(公司<br/>
-					申请)<br/>
-				</span>
-				<span>
-					求职者：<p>签证怎么办理呢？</p>
-					HR：其一，公司提供办理，周期一般7天;第二，自行找淘宝 <br/>
-					网店或旅行社办理，速度相对较慢，周期价格需自己确认;<br/>
-					申请)<br/>
-				</span>
-				<span>
-					求职者：<p>可是我不会英文，可以吗？</p>
-					HR：除了行政翻译岗位对英语有要求，其它岗位都不需要英 <br/>
-					文。公司职员来自东南亚各个国家，都是华人，说的都是中<br/>
-					文。就像爸爸妈妈出国旅游，不会英文，也没有影响一样。<br/>	
-				</span>
-				<span>
-					求职者：<p>菲律宾工作是否安全呢？</p>
-					HR：全世界除了战乱国家存在安全隐患，其它国家期货死和咱<br/>
-					们中国是一样的。大家都是平民百姓，每天努力工作和生<br/>
-					活。更别说公司是在菲律宾首都马尼拉市中心了。<br/>	
-				</span>
-			</div>
+			
 		</section>
 	</div>
 </template>
