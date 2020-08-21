@@ -14,16 +14,8 @@
 	}
 	.content{
 		margin-top: 38px;
-		.title{
-			font-family: "Microsoft YaHei" ;
-			font-size:48px;
-			font-weight: bold;
-			color: rgb(#222222);
-			img{
-				width: 88px;
-				height: 7px;
-			}
-		}
+	
+	}
 		ul{
 			display: flex;
 			flex-direction: row;
@@ -32,15 +24,62 @@
 				display: inline-block;
 				width: 750px;
 				height: 450px;
-				border: 1px solid green;
+				// border: 1px solid green;
 				img{
+					// border: 1px solid red;
 					height: 100%;
 					width: 100%;
+					// object-fit: cover;
+				}
+			}
+			.text_box{
+				
+				.icon{
+					display: inline-block;
+					height:100%;
+					width: 100%;
+					border: 1px solid green;
+					
+
+				}
+				.text{
+					display: inline-block;	
+				}
+			}
+			.right{
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				img{
 					object-fit: cover;
+					height: 100%;
+					width: 100%;
+					// border: 1px solid red;
+					padding-left: 72px;
+					margin-right: 13px;
+				}
+				.weixin{
+					width: 400px;
+					height: 56px;
+					// border: 1px solid red;
+					font-family: 'microsoft Yahei';
+					font-size:48px;
+					margin-left:172px ;
+					color: #333333;
+				}
+				.qq{
+					width: 400px;
+					height: 56px;
+					// border: 1px solid red;
+					font-family: 'microsoft Yahei';
+					font-size:48px;
+					margin-left:320px ;
+					color: #333333;
 				}
 			}
 		}
-	};
+	
 }
 .box2{
 	display: flex;
@@ -51,6 +90,8 @@
 }
 .box3{
 	background: url("~@/assets/contact/bg.png");
+	
+
 	width: 1512px;
 	height: 1285px;
 	margin:auto;

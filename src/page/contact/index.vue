@@ -12,24 +12,35 @@
 		</div>
 		<div class='content'>
 			<ul>
-				<li class="title">
-					招聘负责人
-					<img :src="require('@/assets/contact/dbx1.png')" />
-					<img :src="require('@/assets/contact/icon.png')" />
+				<li class='text_box'>
+					<div class='line'>
+					<img :src="require('@/assets/contact/icon_1.png')"/>
+					<img :src="require('@/assets/contact/jiantou.png')" />
+					</div>
 				</li>
 				<li >
-					<img :src="require('@/assets/contact/p2.png')" />
-			
+					<div class="contact">
+						<img :src="require('@/assets/contact/p2.png')" />
+						
+					</div>
+					
 				</li>
 			</ul>
 
-				<ul>
+			<ul>
 				<li>
-					<img :src="require('@/assets/contact/P3.png')" />
+					<div>
+						<img :src="require('@/assets/contact/P3.png')" />
+					</div>
+					
 				</li>
 		
 				<li class="right">
-					<img :src="require('@/assets/contact/P4.png')" />
+					<div>
+						<img :src="require('@/assets/contact/P4.png')" />
+						<span class="weixin">微信</span><span class='qq'>QQ</span>
+					</div>
+					
 				</li>
 			</ul>
 			</div>
