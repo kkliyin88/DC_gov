@@ -145,7 +145,7 @@
 					<img :src="require('@/assets/live/charity.png')" />
 				</div>
 				<div class='text_box'>
-					<span class="wenzi_1"> 
+					<div class="wenzi_1"> 
 						<p class='sh_1'>公司近几年在砥砺发展的同时，始终没忘作为一家企业</p>
 						<p>的社会责任。自2019年伊始，公司先是对菲律宾当地儿童福</p>
 						<p>利院进行生活用品和日常药品捐助，接着，圣诞节期间，联</p>
@@ -154,11 +154,12 @@
 						<p>所未有的生存隐患，公司即刻发动全员上下进行爱心捐赠活</p>
 						<p>动，鼓励更多的人参与社会公益。同时，不定期对内部贫困</p>
 						<p>职员进行生活帮扶。</p>
-					</span>	
-					<span class="wenzi_1"> 
+					</div>
+
+					<div class="wenzi_1"> 
 						<p class='sh_1'>也希望，未来的社会公益路上，有更多的你、我、他同</p>
 						<p>行，把这条路走宽，走远！</p>
-					</span>	
+					</div>	
 				</div>
 			</div>
 		</section>

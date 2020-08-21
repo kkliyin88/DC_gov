@@ -58,7 +58,6 @@
     }
 </script>
 <style scoped lang="less">
-	 @import "./index.less";
 	 .nav_wrap{
 		 height: 60px;
 		 display: flex;
@@ -95,10 +94,10 @@
 			justify-content:center;
 			li{
 				display: inline-block;
-				font-size: 14px;
+				font-size: 28px;
 				margin: 0 25px;
 				height: 40px;
-				line-height: 40px;
+				line-height: 60px;
 				cursor: pointer;
 				.activeNav{
 					text-decoration:underline

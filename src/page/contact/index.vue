@@ -14,8 +14,8 @@
 			<ul>
 				<li class='text_box'>
 					<div class='line'>
-					<img :src="require('@/assets/contact/icon_1.png')"/>
-					<img :src="require('@/assets/contact/jiantou.png')" />
+						<img :src="require('@/assets/contact/icon_1.png')"/>
+						<div class="button">></div>
 					</div>
 				</li>
 				<li >
