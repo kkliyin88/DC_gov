@@ -59,7 +59,7 @@
 </script>
 <style scoped lang="less">
 	 .nav_wrap{
-		 height: 60px;
+		 height: 150px;
 		 display: flex;
 		 flex-direction: row;
 		 justify-content: center;
@@ -78,8 +78,8 @@
 	 .left{
 		 justify-content: flex-end;
 		 img{
-			 width: 150px;
-			 height: 36px;
+			 width: 450px;
+			 height: 100px;
 			 
 		 }
 	 }

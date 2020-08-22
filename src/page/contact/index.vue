@@ -13,9 +13,33 @@
 		<div class='content'>
 			<ul>
 				<li class='text_box'>
-					<div class='line'>
-						<img :src="require('@/assets/contact/icon_1.png')"/>
-						<div class="button">></div>
+					<div class='wenzi'>招聘负责人</div>
+					<div class='line_1'><img :src="require('@/assets/contact/dbx1.png')"/></div>
+					<div class='box'>		
+						<div class='line'>
+							<div class='icon_1'>	<img :src="require('@/assets/contact/weixin.png')"/></div>
+							<div class='text_1'>微信：b5oppo138</diV>	
+						</div>	
+						<div class='line'>
+							<div class='icon'>	<img :src="require('@/assets/contact/QQ.png')"/></div>
+							<div class='text'>QQ：67746999</diV>
+						</div>	
+						<div class='line'>
+							<div class='icon'>	<img :src="require('@/assets/contact/line.png')"/></div>
+							<div class='text'>Line：audrey-nit</diV>
+						</div>
+						<div class='line'>
+							<div class='icon'>	<img :src="require('@/assets/contact/telegram.png')"/></div>
+							<div class='text'>电报：@Audrey_HR</diV>
+						</div>
+						<div class='line'>
+							<div class='icon'>	<img :src="require('@/assets/contact/email.png')"/></div>
+							<div class='text'>邮箱：67746999@qq.com</diV>
+							<div class='img'>
+								<div class='img_1'><img :src="require('@/assets/contact/jiantou.png')"/></div>
+							</div>
+						</div>
+							
 					</div>
 				</li>
 				<li >
